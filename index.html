@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엄마, 생신 축하드려요! 🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="desk">
+        <div class="desk-surface"></div>
+        <div class="items-container">
+            <div class="item envelope-container">
+                <div class="envelope" onclick="openLetter()">
+                    <div class="flap"></div>
+                    <div class="body"></div>
+                    <div class="note">To: 엄마</div>
+                </div>
+            </div>
+
+            <div class="item book-container">
+                <div class="book">
+                    <div class="cover front" onclick="openBook()">
+                        <div class="spine"></div>
+                        <div class="text">사진첩</div>
+                    </div>
+                    <div class="cover back"></div>
+                    <div class="page page1"></div>
+                    <div class="page page2"></div>
+                </div>
+            </div>
+
+            <div class="item camcorder-container">
+                <div class="camcorder" onclick="playVideo()">
+                    <div class="lens"></div>
+                    <div class="screen"></div>
+                    <div class="button">REC</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
