@@ -23,21 +23,21 @@ body {
 
 .desk-surface {
     position: absolute;
-    width: 300px;
-    height: 200px;
+    width: 75vw; /* 300px -> 75vw (300/400*100) */
+    height: 50vw; /* 200px -> 50vw (200/400*100) */
     background: #8B4513;
-    border-radius: 5px;
+    border-radius: 1.25vw; /* 5px -> 1.25vw */
     box-shadow:
-        0 10px 20px rgba(0, 0, 0, 0.3),
-        inset 0 0 15px rgba(0, 0, 0, 0.4);
+        0 2.5vw 5vw rgba(0, 0, 0, 0.3), /* 10px -> 2.5vw, 20px -> 5vw */
+        inset 0 0 3.75vw rgba(0, 0, 0, 0.4); /* 15px -> 3.75vw */
 
-    transform: rotateX(20deg) rotateY(-5deg) rotateZ(10deg) translateZ(0px);
+    transform: rotateX(20deg) rotateY(-5deg) rotateZ(10deg) translateZ(0vw); /* 0px -> 0vw */
     transform-origin: center center;
 
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
+        linear-gradient(rgba(255, 255, 255, 0.05) 0.25vw, transparent 0.25vw), /* 1px -> 0.25vw */
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0.25vw, transparent 0.25vw); /* 1px -> 0.25vw */
+    background-size: 5vw 5vw; /* 20px -> 5vw */
 
     &::before {
         content: '';
@@ -45,54 +45,54 @@ body {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 15px;
+        height: 3.75vw; /* 15px -> 3.75vw */
         background: inherit;
         background-color: #6D350F;
-        transform: rotateX(90deg) translateY(50%) translateZ(-7.5px);
+        transform: rotateX(90deg) translateY(50%) translateZ(-1.875vw); /* -7.5px -> -1.875vw */
         transform-origin: bottom center;
-        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 1.25vw rgba(0, 0, 0, 0.2); /* 5px -> 1.25vw */
     }
 }
 
 .items-container {
     position: absolute;
-    width: 300px;
-    height: 200px;
+    width: 75vw; /* 300px -> 75vw */
+    height: 50vw; /* 200px -> 50vw */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 2.5vw; /* 10px -> 2.5vw */
     box-sizing: border-box;
     z-index: 10;
 
-    transform: rotateX(20deg) rotateY(-5deg) rotateZ(10deg) translateZ(0px);
+    transform: rotateX(20deg) rotateY(-5deg) rotateZ(10deg) translateZ(0vw); /* 0px -> 0vw */
 
-    padding-top: 30px;
+    padding-top: 7.5vw; /* 30px -> 7.5vw */
 }
 
 .item {
     position: relative;
-    width: 80px;
+    width: 20vw; /* 80px -> 20vw */
     height: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0.75vw 0.75vw 2vw rgba(0, 0, 0, 0.3)); /* 3px 3px 8px -> 0.75vw 0.75vw 2vw */
 }
 
 .envelope-container {
-    transform: translateY(20px) translateX(-5px) rotateZ(-10deg);
+    transform: translateY(5vw) translateX(-1.25vw) rotateZ(-10deg); /* 20px -> 5vw, -5px -> -1.25vw */
     z-index: 1;
 }
 
 .envelope {
-    width: 80px;
-    height: 50px;
+    width: 20vw; /* 80px -> 20vw */
+    height: 12.5vw; /* 50px -> 12.5vw */
     background-color: #F0EAD6;
     position: relative;
     cursor: pointer;
-    border-radius: 3px;
-    border: 1px solid #ccc;
+    border-radius: 0.75vw; /* 3px -> 0.75vw */
+    border: 0.25vw solid #ccc; /* 1px -> 0.25vw */
     transition: transform 0.2s;
 }
 
@@ -102,13 +102,13 @@ body {
 
 .envelope .flap {
     position: absolute;
-    top: -12px;
+    top: -3vw; /* -12px -> -3vw */
     left: 0;
     width: 0;
     height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 15px solid #D1C4E9;
+    border-left: 10vw solid transparent; /* 40px -> 10vw */
+    border-right: 10vw solid transparent; /* 40px -> 10vw */
+    border-bottom: 3.75vw solid #D1C4E9; /* 15px -> 3.75vw */
     z-index: 2;
 }
 
@@ -120,10 +120,10 @@ body {
 
 .envelope .note {
     position: absolute;
-    bottom: 5px;
+    bottom: 1.25vw; /* 5px -> 1.25vw */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 7px;
+    font-size: 1.75vw; /* 7px -> 1.75vw */
     color: black;
     font-style: italic;
     white-space: nowrap;
@@ -131,9 +131,9 @@ body {
 
 
 .book-container {
-    width: 100px;
-    height: 130px;
-    transform: translateY(-20px) translateX(0px) rotateZ(0deg);
+    width: 25vw; /* 100px -> 25vw */
+    height: 32.5vw; /* 130px -> 32.5vw */
+    transform: translateY(-5vw) translateX(0vw) rotateZ(0deg); /* -20px -> -5vw */
     z-index: 2;
 }
 
@@ -156,45 +156,45 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    border: 3px solid #CD853F;
+    border: 0.75vw solid #CD853F; /* 3px -> 0.75vw */
     cursor: pointer;
     transition: transform 0.5s;
-    border-radius: 2px;
+    border-radius: 0.5vw; /* 2px -> 0.5vw */
 }
 
 .book .front {
     transform-origin: left;
-    transform: translateZ(6px);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateZ(1.5vw); /* 6px -> 1.5vw */
+    box-shadow: 0.5vw 0.5vw 1.25vw rgba(0, 0, 0, 0.2); /* 2px 2px 5px -> 0.5vw 0.5vw 1.25vw */
 }
 
 .book .text {
-    font-size: 16px;
+    font-size: 4vw; /* 16px -> 4vw */
     font-weight: bold;
     font-family: 'Malgun Gothic', 'Nanum Gothic', sans-serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    padding: 5px;
+    text-shadow: 0.25vw 0.25vw 0.5vw rgba(0, 0, 0, 0.5); /* 1px 1px 2px -> 0.25vw 0.25vw 0.5vw */
+    padding: 1.25vw; /* 5px -> 1.25vw */
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    letter-spacing: 1px;
-    transform: translateY(5px);
+    border-radius: 0.75vw; /* 3px -> 0.75vw */
+    letter-spacing: 0.25vw; /* 1px -> 0.25vw */
+    transform: translateY(1.25vw); /* 5px -> 1.25vw */
 }
 
 .book .spine {
     position: absolute;
-    left: -6px;
+    left: -1.5vw; /* -6px -> -1.5vw */
     top: 0;
-    width: 6px;
+    width: 1.5vw; /* 6px -> 1.5vw */
     height: 100%;
     background-color: #8B4513;
-    transform: rotateY(90deg) translateZ(-6px);
+    transform: rotateY(90deg) translateZ(-1.5vw); /* -6px -> -1.5vw */
     transform-origin: left;
-    box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0.5vw 0 1.25vw rgba(0, 0, 0, 0.3); /* 2px 0 5px -> 0.5vw 0 1.25vw */
 }
 
 .book .back {
     background-color: #A0522D;
-    transform: rotateY(180deg) translateZ(6px);
+    transform: rotateY(180deg) translateZ(1.5vw); /* 6px -> 1.5vw */
 }
 
 .book .page {
@@ -204,28 +204,28 @@ body {
     background-color: #F8F8F8;
     z-index: -1;
     transform-origin: left;
-    border-right: 1px solid #ddd;
-    box-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.1);
+    border-right: 0.25vw solid #ddd; /* 1px -> 0.25vw */
+    box-shadow: inset -0.25vw 0 0.75vw rgba(0, 0, 0, 0.1); /* -1px 0 3px -> -0.25vw 0 0.75vw */
 }
 
 .book .page1 {
-    transform: translateZ(5px);
+    transform: translateZ(1.25vw); /* 5px -> 1.25vw */
 }
 
 .book .page2 {
-    transform: translateZ(4px);
+    transform: translateZ(1vw); /* 4px -> 1vw */
 }
 
 .book.open .front {
-    transform: rotateY(-90deg) translateZ(6px);
+    transform: rotateY(-90deg) translateZ(1.5vw); /* 6px -> 1.5vw */
     z-index: 10;
 }
 
 
 .camcorder-container {
-    width: 90px;
-    height: 60px;
-    transform: translateY(25px) translateX(5px) rotateZ(15deg);
+    width: 22.5vw; /* 90px -> 22.5vw */
+    height: 15vw; /* 60px -> 15vw */
+    transform: translateY(6.25vw) translateX(1.25vw) rotateZ(15deg); /* 25px -> 6.25vw, 5px -> 1.25vw */
     z-index: 1;
 }
 
@@ -233,17 +233,17 @@ body {
     width: 100%;
     height: 100%;
     background-color: #222;
-    border-radius: 5px;
+    border-radius: 1.25vw; /* 5px -> 1.25vw */
     position: relative;
     cursor: pointer;
-    border: 2px solid #111;
+    border: 0.5vw solid #111; /* 2px -> 0.5vw */
     transition: transform 0.2s;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
+    padding: 1.25vw; /* 5px -> 1.25vw */
     box-sizing: border-box;
-    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 1.25vw rgba(255, 255, 255, 0.1); /* 5px -> 1.25vw */
 }
 
 .camcorder:active {
@@ -251,33 +251,33 @@ body {
 }
 
 .camcorder .lens {
-    width: 35px;
-    height: 35px;
+    width: 8.75vw; /* 35px -> 8.75vw */
+    height: 8.75vw; /* 35px -> 8.75vw */
     border-radius: 50%;
-    background: radial-gradient(circle at 10px 10px, #666, #111);
-    border: 3px solid #555;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    background: radial-gradient(circle at 2.5vw 2.5vw, #666, #111); /* 10px -> 2.5vw */
+    border: 0.75vw solid #555; /* 3px -> 0.75vw */
+    box-shadow: inset 0 0 1.25vw rgba(0, 0, 0, 0.5); /* 5px -> 1.25vw */
 }
 
 .camcorder .screen {
-    width: 45px;
-    height: 30px;
+    width: 11.25vw; /* 45px -> 11.25vw */
+    height: 7.5vw; /* 30px -> 7.5vw */
     background-color: #0A0;
-    border: 1px solid #444;
-    border-radius: 2px;
-    box-shadow: inset 0 0 5px rgba(0, 255, 0, 0.5);
+    border: 0.25vw solid #444; /* 1px -> 0.25vw */
+    border-radius: 0.5vw; /* 2px -> 0.5vw */
+    box-shadow: inset 0 0 1.25vw rgba(0, 255, 0, 0.5); /* 5px -> 1.25vw */
 }
 
 .camcorder .button {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 1.25vw; /* 5px -> 1.25vw */
+    right: 1.25vw; /* 5px -> 1.25vw */
     background-color: red;
     color: white;
-    font-size: 8px;
-    padding: 2px 4px;
-    border-radius: 3px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 2vw; /* 8px -> 2vw */
+    padding: 0.5vw 1vw; /* 2px 4px -> 0.5vw 1vw */
+    border-radius: 0.75vw; /* 3px -> 0.75vw */
+    box-shadow: 0.25vw 0.25vw 0.5vw rgba(0, 0, 0, 0.5); /* 1px 1px 2px -> 0.25vw 0.25vw 0.5vw */
 }
 
 
@@ -297,12 +297,12 @@ body {
 .modal-content {
     background-color: #fefefe;
     margin: 40% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 5vw; /* 20px -> 5vw */
+    border: 0.25vw solid #888; /* 1px -> 0.25vw */
     width: 80%;
-    border-radius: 10px;
+    border-radius: 2.5vw; /* 10px -> 2.5vw */
     position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1.25vw 3.75vw rgba(0, 0, 0, 0.5); /* 5px 15px -> 1.25vw 3.75vw */
     max-height: 50vh;
     overflow-y: auto;
 }
@@ -310,7 +310,7 @@ body {
 .close-button {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 7vw; /* 28px -> 7vw */
     font-weight: bold;
 }
 
@@ -334,19 +334,19 @@ body {
 .album-title {
     text-align: center;
     color: #A0522D;
-    margin-bottom: 20px;
+    margin-bottom: 5vw; /* 20px -> 5vw */
     font-family: 'Malgun Gothic', 'Nanum Gothic', sans-serif;
 }
 
 .slider-wrapper {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 150vw; /* 600px -> 150vw */
     margin: 0 auto;
-    border: 5px solid #F0EAD6;
-    border-radius: 8px;
+    border: 1.25vw solid #F0EAD6; /* 5px -> 1.25vw */
+    border-radius: 2vw; /* 8px -> 2vw */
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5vw 2.5vw rgba(0, 0, 0, 0.2); /* 2px 10px -> 0.5vw 2.5vw */
 }
 
 .image-slider {
@@ -385,9 +385,9 @@ body {
     width: 100%;
     background-color: rgba(67, 67, 67, 0.504);
     color: white;
-    padding: 10px 15px;
+    padding: 2.5vw 3.75vw; /* 10px 15px -> 2.5vw 3.75vw */
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 2.25vw; /* 0.9rem -> 2.25vw (대략) */
 }
 
 .prev-button,
@@ -397,12 +397,12 @@ body {
     top: 50%;
     transform: translateY(-50%);
     width: auto;
-    padding: 12px;
+    padding: 3vw; /* 12px -> 3vw */
     color: white;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 6vw; /* 24px -> 6vw */
     transition: 0.3s;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 0.75vw 0.75vw 0; /* 3px -> 0.75vw */
     user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -417,96 +417,95 @@ body {
 
 .prev-button {
     left: 0;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 1.25vw 1.25vw 0; /* 5px -> 1.25vw */
 }
 
 .next-button {
     right: 0;
-    border-radius: 5px 0 0 5px;
+    border-radius: 1.25vw 0 0 1.25vw; /* 5px -> 1.25vw */
 }
 
 .page-indicator {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 2.5vw; /* 10px -> 2.5vw */
     font-weight: bold;
     color: #6D350F;
 }
 
 .guide-text {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 2.125vw; /* 0.85rem -> 2.125vw (대략) */
     color: #555;
-    margin-top: 15px;
+    margin-top: 3.75vw; /* 15px -> 3.75vw */
 }
-
 
 
 @media (max-width: 480px) {
 
     .desk-surface,
     .items-container {
-        width: 280px;
-        height: 180px;
-        transform: rotateX(20deg) rotateY(-5deg) rotateZ(10deg) translateZ(0px);
+        width: 70vw; /* 280px -> 70vw (280/400*100) */
+        height: 45vw; /* 180px -> 45vw (180/400*100) */
+        transform: rotateX(20deg) rotateY(-5deg) rotateZ(10deg) translateZ(0vw); /* 0px -> 0vw */
     }
 
     .items-container {
-        padding-top: 25px;
+        padding-top: 6.25vw; /* 25px -> 6.25vw */
     }
 
     .item {
-        width: 70px;
+        width: 17.5vw; /* 70px -> 17.5vw */
     }
 
     .envelope {
-        width: 70px;
-        height: 45px;
+        width: 17.5vw; /* 70px -> 17.5vw */
+        height: 11.25vw; /* 45px -> 11.25vw */
     }
 
     .envelope .flap {
-        border-left: 35px solid transparent;
-        border-right: 35px solid transparent;
-        border-bottom: 12px solid #D1C4E9;
+        border-left: 8.75vw solid transparent; /* 35px -> 8.75vw */
+        border-right: 8.75vw solid transparent; /* 35px -> 8.75vw */
+        border-bottom: 3vw solid #D1C4E9; /* 12px -> 3vw */
     }
 
     .envelope .note {
-        font-size: 10px;
+        font-size: 2.5vw; /* 10px -> 2.5vw */
     }
 
     .book-container {
-        width: 90px;
-        height: 115px;
-        transform: translateY(-15px) translateX(0px) rotateZ(0deg);
+        width: 22.5vw; /* 90px -> 22.5vw */
+        height: 28.75vw; /* 115px -> 28.75vw */
+        transform: translateY(-3.75vw) translateX(0vw) rotateZ(0deg); /* -15px -> -3.75vw */
     }
 
     .book .text {
-        font-size: 14px;
+        font-size: 3.5vw; /* 14px -> 3.5vw */
     }
 
     .camcorder-container {
-        width: 80px;
-        height: 50px;
-        transform: translateY(20px) translateX(5px) rotateZ(15deg);
+        width: 20vw; /* 80px -> 20vw */
+        height: 12.5vw; /* 50px -> 12.5vw */
+        transform: translateY(5vw) translateX(1.25vw) rotateZ(15deg); /* 20px -> 5vw, 5px -> 1.25vw */
     }
 
     .camcorder .lens {
-        width: 30px;
-        height: 30px;
+        width: 7.5vw; /* 30px -> 7.5vw */
+        height: 7.5vw; /* 30px -> 7.5vw */
     }
 
     .camcorder .screen {
-        width: 40px;
-        height: 25px;
+        width: 10vw; /* 40px -> 10vw */
+        height: 6.25vw; /* 25px -> 6.25vw */
     }
 
     .camcorder .button {
-        font-size: 7px;
-        padding: 1px 3px;
+        font-size: 1.75vw; /* 7px -> 1.75vw */
+        padding: 0.25vw 0.75vw; /* 1px 3px -> 0.25vw 0.75vw */
     }
 
     .prev-button,
     .next-button {
-        padding: 8px;
-        font-size: 20px;
+        padding: 2vw; /* 8px -> 2vw */
+        font-size: 5vw; /* 20px -> 5vw */
     }
 }
