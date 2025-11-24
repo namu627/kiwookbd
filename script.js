@@ -11,7 +11,7 @@ const albumImages = [
     { url: "photo/pt6.jpg", caption: "남유찬 사춘기 날려버리기" },
     { url: "photo/pt7.jpg", caption: "함덕해수욕장 델문도 카페에서" },
     { url: "photo/pt8.jpg", caption: "2021년 가족여행" },
-    { url: "photo/pt9.jpg", caption: "엄마가 아들 다리에 낙서함" },
+    { url: "photo/pt9.jpg", caption: "아들 다리에 낙서" },
     { url: "photo/pt10.jpg", caption: "훈련소 끝나고 잠깐 면회할 때.." },
     { url: "photo/pt11.jpg", caption: "어느새 상병달고 속초여행" },
     { url: "photo/pt12.jpg", caption: "부산 껍데기 맛집" },
@@ -117,7 +117,7 @@ function openBook() {
 function playVideo() {
     const videoContent = `
         <h3>🎥 수상한 아빠 발견..?</h3>
-        <iframe width="100%" height="315" 
+        <iframe width="100%" height="400vw" 
             src="https://www.youtube.com/embed/hemEypeu-jw?si=s2cEanVPA_810dyn" 
             title="엄마 생신 축하 영상" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
