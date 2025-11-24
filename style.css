@@ -300,6 +300,7 @@ body {
     padding: 5vw; /* 20px -> 5vw */
     border: 0.25vw solid #888; /* 1px -> 0.25vw */
     width: 80%;
+    height: 50%;
     border-radius: 2.5vw; /* 10px -> 2.5vw */
     position: relative;
     box-shadow: 0 1.25vw 3.75vw rgba(0, 0, 0, 0.5); /* 5px 15px -> 1.25vw 3.75vw */
