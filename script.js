@@ -117,7 +117,7 @@ function openBook() {
 function playVideo() {
     const videoContent = `
         <h3>🎥 수상한 아빠 발견..?</h3>
-        <iframe width="100%" height="400vw" 
+        <iframe width="100%" height="500vw" 
             src="https://www.youtube.com/embed/hemEypeu-jw?si=s2cEanVPA_810dyn" 
             title="엄마 생신 축하 영상" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
